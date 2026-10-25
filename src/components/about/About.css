@@ -103,7 +103,9 @@
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.2px;
-  transition: color 180ms ease, gap 180ms ease;
+  transition:
+    color 180ms ease,
+    gap 180ms ease;
 }
 
 .about-text-link span {
@@ -249,7 +251,9 @@
 .about-principle-plus {
   color: #aaa197;
   font-size: 16px;
-  transition: color 180ms ease, transform 180ms ease;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .about-principle:hover .about-principle-plus {
@@ -343,6 +347,21 @@
   .about-photo-panel {
     min-height: 390px;
   }
+
+  .about-photo-orbit {
+    width: 75%;
+    left: 13%;
+  }
+  .about-photo-orbit::after {
+    inset: 5%;
+     transform: rotate(-40deg) ;
+  }
+
+  /* content: "";
+  position: absolute;
+  inset: 12%;
+  
+  */
 
   .about-principle {
     padding: 22px 0;
