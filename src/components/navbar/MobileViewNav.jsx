@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navbar.css"
 
 function MobileViewNav({ navLinks, isOpen, setIsOpen }) {
@@ -8,25 +7,26 @@ function MobileViewNav({ navLinks, isOpen, setIsOpen }) {
       id="mobile-navigation"
       aria-hidden={!isOpen}
       inert={!isOpen}
+      role="dialog"
+      aria-modal={isOpen ? "true" : undefined}
+      aria-label="Portfolio navigation"
+      onClick={() => setIsOpen(false)}
     >
-      {/* <div className="menu-glow" aria-hidden="true" /> */}
-
       <div
         className="mobile-menu-panel"
         onClick={(event) => event.stopPropagation()}
       >
         <div className="menu-top">
-          <span className="menu-eyebrow">NAVIGATION / 01—04</span>
+          <a className="menu-brand" href="#home" onClick={() => setIsOpen(false)}>
+            SG<span>.</span>
+            <small>SHUBHAM GANRAJ / PORTFOLIO</small>
+          </a>
 
-          <button
-            className="menu-close"
-            type="button"
-            aria-label="Close navigation"
-            onClick={() => setIsOpen(false)}
-          >
-            <span>Close</span>
-            <span className="close-symbol">×</span>
-          </button>
+        </div>
+
+        <div className="menu-stage-label">
+          <span />
+          SELECT YOUR NEXT STOP
         </div>
 
         <div className="menu-links">
@@ -47,25 +47,10 @@ function MobileViewNav({ navLinks, isOpen, setIsOpen }) {
         </div>
 
         <div className="menu-footer">
-          <span>BUILDING THINGS FOR THE WEB.</span>
-
-          <div className="menu-socials">
-            <a
-              href="https://github.com/YOUR_USERNAME"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub ↗
-            </a>
-
-            <a
-              href="https://linkedin.com/in/YOUR_USERNAME"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn ↗
-            </a>
-          </div>
+          <span>BUILD <b>•</b> LEARN <b>•</b> GROW</span>
+          <a href="#contact" onClick={() => setIsOpen(false)}>
+            HAVE A GOOD IDEA? LET&apos;S TALK <span>↗</span>
+          </a>
         </div>
       </div>
     </div>

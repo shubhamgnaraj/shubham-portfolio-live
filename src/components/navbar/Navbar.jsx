@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.css"
 import MobileViewNav from "./MobileViewNav";
 
@@ -10,9 +10,28 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
     <>
-    <nav className="navbar">
+    <nav className={`navbar ${isOpen ? "menu-open" : ""}`}>
       <a href="#home" className="logo">
         SG<span>.</span>
       </a>
@@ -29,7 +48,7 @@ const Navbar = () => {
 
       <div className="hamburger-icon">
         <button
-        className={`menu-toggle`}
+        className={`menu-toggle ${isOpen ? "active" : ""}`}
         type="button"
         aria-label={isOpen ? "Close navigation" : "Open navigation"}
         aria-expanded={isOpen}
@@ -42,7 +61,7 @@ const Navbar = () => {
       </div>
       
     </nav>
-    {isOpen && <MobileViewNav navLinks={navLinks} isOpen={isOpen} setIsOpen={setIsOpen} />}
+    <MobileViewNav navLinks={navLinks} isOpen={isOpen} setIsOpen={setIsOpen} />
         </>
   );
 };

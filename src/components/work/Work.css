@@ -812,7 +812,11 @@
   .work-heading h2 { font-size: clamp(54px, 12vw, 90px); }
   .work-intro { width: min(420px, 100%); }
   .work-index { margin-bottom: 10px; }
-  .work-project-featured .project-visual-link { aspect-ratio: 1.25 / 1; }
+  .work-project-featured .project-visual-link {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 1.25 / 1;
+  }
   .work-grid { grid-template-columns: 1fr; gap: 48px; }
   .work-grid .project-visual-link { aspect-ratio: 1.25 / 1; }
   .work-grid .project-content h3 { font-size: 38px; }
