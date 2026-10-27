@@ -44,7 +44,10 @@ const projects = [
 
 function WhatsAppPreview() {
   return (
-    <div className="preview-whatsapp" aria-label="Decorative messaging app preview">
+    <div
+      className="preview-whatsapp"
+      aria-label="Decorative messaging app preview"
+    >
       <div className="wa-sidebar">
         <div className="wa-topline">
           <span className="wa-mark">w.</span>
@@ -57,7 +60,10 @@ function WhatsAppPreview() {
           ["RK", "Rahul Kulkarni", "Sent you the details.", "Yesterday"],
           ["DS", "Design team", "You: Updated the screens", "Yesterday"],
         ].map(([initials, name, message, time], index) => (
-          <div className={`wa-chat-row ${index === 0 ? "is-active" : ""}`} key={name}>
+          <div
+            className={`wa-chat-row ${index === 0 ? "is-active" : ""}`}
+            key={name}
+          >
             <span className={`wa-avatar wa-avatar-${index}`}>{initials}</span>
             <span className="wa-chat-copy">
               <strong>{name}</strong>
@@ -70,28 +76,51 @@ function WhatsAppPreview() {
       <div className="wa-conversation">
         <div className="wa-conversation-head">
           <span className="wa-avatar wa-avatar-0">AM</span>
-          <span><strong>Aarav Mehta</strong><small>online</small></span>
+          <span>
+            <strong>Aarav Mehta</strong>
+            <small>online</small>
+          </span>
           <span className="wa-head-icons">⌕ &nbsp; ⋮</span>
         </div>
         <div className="wa-messages">
           <span className="wa-day">TODAY</span>
-          <div className="wa-bubble wa-in">Hey! How's the new build coming along?<time>10:39</time></div>
-          <div className="wa-bubble wa-out">Pretty good — real-time updates are working now.<time>10:40 ✓✓</time></div>
-          <div className="wa-bubble wa-in">Nice. What about delivery and read receipts?<time>10:41</time></div>
-          <div className="wa-bubble wa-out">Both are in. Testing the edge cases next.<time>10:42 ✓✓</time></div>
+          <div className="wa-bubble wa-in">
+            Hey! How's the new build coming along?<time>10:39</time>
+          </div>
+          <div className="wa-bubble wa-out">
+            Pretty good — real-time updates are working now.
+            <time>10:40 ✓✓</time>
+          </div>
+          <div className="wa-bubble wa-in">
+            Nice. What about delivery and read receipts?<time>10:41</time>
+          </div>
+          <div className="wa-bubble wa-out">
+            Both are in. Testing the edge cases next.<time>10:42 ✓✓</time>
+          </div>
         </div>
-        <div className="wa-composer"><span>＋</span><span>Type a message</span><b>➤</b></div>
+        <div className="wa-composer">
+          <span>＋</span>
+          <span>Type a message</span>
+          <b>➤</b>
+        </div>
       </div>
-      <span className="preview-caption">REAL-TIME MESSAGING UI · CONCEPT PREVIEW</span>
+      <span className="preview-caption">
+        REAL-TIME MESSAGING UI · CONCEPT PREVIEW
+      </span>
     </div>
   );
 }
 
 function AirbnbPreview() {
   return (
-    <div className="preview-airbnb" aria-label="Decorative rental booking app preview">
+    <div
+      className="preview-airbnb"
+      aria-label="Decorative rental booking app preview"
+    >
       <div className="airbnb-nav">
-        <strong className="airbnb-brand">air<span>•</span>stay</strong>
+        <strong className="airbnb-brand">
+          air<span>•</span>stay
+        </strong>
         <span>Anywhere　　Any week　　Add guests</span>
         <b>⌕</b>
       </div>
@@ -108,21 +137,35 @@ function AirbnbPreview() {
         <div>
           <strong>Quiet design stay with natural light</strong>
           <p>Entire home · 2 beds · 4 guests</p>
-          <small>★ 4.96 <span>·</span> 128 reviews</small>
+          <small>
+            ★ 4.96 <span>·</span> 128 reviews
+          </small>
         </div>
-        <div className="airbnb-price"><strong>₹6,200</strong><span> / night</span></div>
+        <div className="airbnb-price">
+          <strong>₹6,200</strong>
+          <span> / night</span>
+        </div>
       </div>
-      <span className="preview-caption">RENTAL DISCOVERY UI · CONCEPT PREVIEW</span>
+      <span className="preview-caption">
+        RENTAL DISCOVERY UI · CONCEPT PREVIEW
+      </span>
     </div>
   );
 }
 
 function TrackerPreview() {
   return (
-    <div className="preview-tracker" aria-label="Decorative employee management dashboard preview">
+    <div
+      className="preview-tracker"
+      aria-label="Decorative employee management dashboard preview"
+    >
       <div className="tracker-top">
-        <span className="tracker-logo">orbit<span>.</span></span>
-        <span className="tracker-user"><i>SG</i> Shubham</span>
+        <span className="tracker-logo">
+          orbit<span>.</span>
+        </span>
+        <span className="tracker-user">
+          <i>SG</i> Shubham
+        </span>
       </div>
       <div className="tracker-layout">
         <aside className="tracker-sidebar">
@@ -135,20 +178,41 @@ function TrackerPreview() {
           <small>MONDAY, 21 OCTOBER</small>
           <h4>People overview</h4>
           <div className="tracker-stats">
-            <div><span>Total members</span><strong>248</strong><em>↑ 12 this month</em></div>
-            <div><span>Employees</span><strong>32</strong><em>Active team</em></div>
+            <div>
+              <span>Total members</span>
+              <strong>248</strong>
+              <em>↑ 12 this month</em>
+            </div>
+            <div>
+              <span>Employees</span>
+              <strong>32</strong>
+              <em>Active team</em>
+            </div>
           </div>
           <div className="tracker-table">
-            <div className="tracker-table-head"><span>NAME</span><span>ROLE</span><span>STATUS</span></div>
+            <div className="tracker-table-head">
+              <span>NAME</span>
+              <span>ROLE</span>
+              <span>STATUS</span>
+            </div>
             {[
               ["AK", "Aditi Kulkarni", "Member", "Active"],
               ["RV", "Rohan Verma", "Employee", "Active"],
               ["PM", "Priya More", "Member", "Pending"],
             ].map(([initials, name, role, status]) => (
               <div className="tracker-table-row" key={name}>
-                <span className="tracker-person"><i>{initials}</i>{name}</span>
+                <span className="tracker-person">
+                  <i>{initials}</i>
+                  {name}
+                </span>
                 <span>{role}</span>
-                <span className={status === "Active" ? "status-active" : "status-pending"}>{status}</span>
+                <span
+                  className={
+                    status === "Active" ? "status-active" : "status-pending"
+                  }
+                >
+                  {status}
+                </span>
               </div>
             ))}
           </div>
@@ -167,21 +231,36 @@ function ProjectVisual({ kind }) {
 
 function ProjectCard({ project, featured = false }) {
   return (
-    <article className={`work-project ${featured ? "work-project-featured" : ""}`}>
-      <a className="project-visual-link" href={project.href} aria-label={`${project.action}: ${project.title}`}>
+    <article
+      className={`work-project ${featured ? "work-project-featured" : ""}`}
+    >
+      <a
+        className="project-visual-link"
+        href={project.href}
+        aria-label={`${project.action}: ${project.title}`}
+      >
         <ProjectVisual kind={project.kind} />
-        <span className="project-open" aria-hidden="true">↗</span>
+        <span className="project-open" aria-hidden="true">
+          ↗
+        </span>
       </a>
       <div className="project-content">
         <div className="project-meta">
-          <span>{project.number} / {project.type}</span>
+          <span>
+            {project.number} / {project.type}
+          </span>
           <span>{project.label}</span>
         </div>
-        <h3>{project.title}<span className="work-period">.</span></h3>
+        <h3>
+          {project.title}
+          <span className="work-period">.</span>
+        </h3>
         <h4>{project.subtitle}</h4>
         <p>{project.description}</p>
         <div className="project-stack">
-          {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
+          {project.stack.map((tech) => (
+            <span key={tech}>{tech}</span>
+          ))}
         </div>
         <a className="project-action" href={project.href}>
           {project.action} <span>↗</span>
@@ -197,24 +276,36 @@ export default function Work() {
       <div className="work-shell">
         <header className="work-heading">
           <div>
-            <p className="work-eyebrow"><span /> SELECTED WORK / 2025—2026</p>
-            <h2>BUILT WITH<br /> <span>INTENTION.</span></h2>
+            <p className="work-eyebrow">
+              <span /> SELECTED WORK / 2025—2026
+            </p>
+            <h2>
+              BUILT WITH
+              <br /> <span>INTENTION.</span>
+            </h2>
           </div>
           <div className="work-intro">
             <span className="work-index">03 PROJECTS · 01 MINDSET</span>
-            <p>A selection of products, experiments, and engineering challenges — built to solve real problems, not just fill a portfolio.</p>
+            <p>
+              A selection of products, experiments, and engineering challenges —
+              built to solve real problems, not just fill a portfolio.
+            </p>
           </div>
         </header>
 
         <div className="work-featured-label">
           <span>01 — FEATURED PROJECT</span>
-          <span>REAL-TIME SYSTEMS <i>✳</i></span>
+          <span>
+            REAL-TIME SYSTEMS <i>✳</i>
+          </span>
         </div>
 
         <ProjectCard project={projects[0]} featured />
 
         <div className="work-more-heading">
-          <p className="work-eyebrow"><span /> MORE PROJECTS</p>
+          <p className="work-eyebrow">
+            <span /> MORE PROJECTS
+          </p>
           <p>Different problems. The same curiosity.</p>
         </div>
 
@@ -226,7 +317,9 @@ export default function Work() {
 
         <footer className="work-footer">
           <p>HAVE A GOOD PROBLEM TO SOLVE?</p>
-          <a href="#contact">LET'S TALK <span>↗</span></a>
+          <a href="#contact">
+            LET'S TALK <span>↗</span>
+          </a>
         </footer>
       </div>
     </section>
